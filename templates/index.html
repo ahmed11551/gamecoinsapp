@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турнирная платформа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .game-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .game-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .game-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .game-description {
+            color: #666;
+            font-size: 14px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎯 Турнирная платформа</h1>
+        
+        <div class="games-grid">
+            <div class="game-card" onclick="window.location.href='/game/clicker'">
+                <div class="game-icon">👆</div>
+                <div class="game-title">Кликер</div>
+                <div class="game-description">Тест на скорость кликов. Кликайте как можно быстрее в течение 10 секунд!</div>
+                <a href="/game/clicker" class="btn">Играть</a>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='/game/reaction'">
+                <div class="game-icon">⚡</div>
+                <div class="game-title">Реакция</div>
+                <div class="game-description">Тест на скорость реакции. Нажмите кнопку как можно быстрее, когда она станет зеленой!</div>
+                <a href="/game/reaction" class="btn">Играть</a>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='/game/2048'">
+                <div class="game-icon">🧩</div>
+                <div class="game-title">2048</div>
+                <div class="game-description">Логическая головоломка. Используйте стрелки для перемещения плиток. Цель: получить плитку 2048!</div>
+                <a href="/game/2048" class="btn">Играть</a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #666;">
+            <p>🎮 Все игры основаны на навыках, а не на удаче</p>
+            <p>🏆 Участвуйте в турнирах и выигрывайте реальные призы!</p>
+        </div>
+    </div>
+</body>
+</html>
